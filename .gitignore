@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv*/
+.conda-env/
+venv/
+build/
+dist/
+
+# Local configuration and credentials
+.env
+.env.*
+.claude/
+.obsidian/
+.idea/
+.vscode/
+
+# Generated benchmark and experiment artifacts
+.cache/
+benchmark/generated/
+experiments/generated/
+results/
+*.jsonl.tmp
+*.log
+
+# CAD and model artifacts
+*.brep
+*.ckpt
+*.safetensors
+*.step
+*.stl
+*.stp
+*.pth
+
+# Documents and large rendered assets are not part of the public source tree
+*.pdf
+*.tiff
+
+# Local archives must never be committed
+GeoAssert_archive_*/
+GeoAssert_pre_public_refactor.bundle
+
+# Operating systems
+.DS_Store
+Thumbs.db

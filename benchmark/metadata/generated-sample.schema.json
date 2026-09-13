@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hechuxielianli/GeoAssert/benchmark/metadata/generated-sample.schema.json",
+  "title": "GeoAssert controlled-mutation sample",
+  "type": "object",
+  "required": [
+    "id",
+    "source_id",
+    "error_class",
+    "injected_code",
+    "gold_code",
+    "truth_steps",
+    "truth_frame",
+    "validity_kind",
+    "mutation"
+  ],
+  "properties": {
+    "id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "error_class": {
+      "enum": [
+        "api_misuse",
+        "param_shift",
+        "boolean_flip",
+        "syntax_error",
+        "operation_omission",
+        "reorder"
+      ]
+    },
+    "injected_code": {"type": "string"},
+    "gold_code": {"type": "string"},
+    "injected_step_index": {"type": "integer", "minimum": 1},
+    "truth_steps": {
+      "type": "array",
+      "items": {"type": "integer", "minimum": 1},
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "truth_frame": {"enum": ["injected", "gold_position", "set"]},
+    "validity_kind": {"enum": ["topology", "numeric", "exec_error"]},
+    "geo_detail": {"type": "string"},
+    "mutation": {"type": "object"}
+  },
+  "additionalProperties": true
+}

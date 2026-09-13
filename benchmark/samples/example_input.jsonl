@@ -1,0 +1,1 @@
+{"id":"synthetic-box-hole","gold_code":"import cadquery as cq\nresult = cq.Workplane('XY').box(40, 30, 10)\nresult = result.faces('>Z').workplane().circle(4).cutThruAll()\n"}

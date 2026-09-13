@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geoassert"
+version = "0.1.0"
+description = "Executable geometric assertions for generated CadQuery programs"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "cadquery>=2.6,<2.8",
+  "numpy>=1.26,<3",
+  "rtree>=1.2,<2",
+  "scipy>=1.11,<2",
+  "trimesh>=4,<5",
+]
+
+[project.optional-dependencies]
+benchmark = ["huggingface-hub>=0.24,<2"]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

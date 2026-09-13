@@ -1,0 +1,12 @@
+name: geoassert
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - cadquery=2.7
+  - numpy
+  - scipy
+  - trimesh
+  - rtree
+  - pytest
+  - pip
